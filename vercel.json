@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd greeting-card && npm run build",
+  "outputDirectory": "greeting-card/dist",
+  "devCommand": "cd greeting-card && npm run dev",
+  "env": {
+    "VITE_API_URL": "@vite-api-url"
+  }
+}
