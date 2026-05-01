@@ -1,0 +1,119 @@
+/* Main scene animation styles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Envelope styling */
+.envelope {
+  position: relative;
+  width: 48px;
+  height: 32px;
+  background-color: rgb(244, 63, 94); /* rose-400 */
+  border: 2px solid rgb(15, 23, 42); /* slate-900 */
+  border-radius: 2px;
+}
+
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(225, 29, 72); /* rose-600 for flap */
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  border-bottom: 1px solid rgb(15, 23, 42);
+}
+
+.envelope-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Modal and dialog styles */
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.pdf-modal-content {
+  background-color: #FFFAF0;
+  border: 4px solid rgb(15, 23, 42);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 8px 8px 0px 0px rgba(15, 23, 42, 1);
+  overflow: auto;
+  position: relative;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: auto;
+  border: 2px solid rgb(15, 23, 42);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* Button styles */
+.btn-modal {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgb(244, 63, 94); /* rose-400 */
+  color: white;
+  font-weight: bold;
+  border: 2px solid rgb(15, 23, 42);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px 0px rgba(15, 23, 42, 1);
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  margin-right: 12px;
+}
+
+.btn-modal:hover {
+  background-color: rgb(225, 29, 72); /* rose-600 */
+  box-shadow: 6px 6px 0px 0px rgba(15, 23, 42, 1);
+}
+
+.btn-modal:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px 0px rgba(15, 23, 42, 1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(15, 23, 42);
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}

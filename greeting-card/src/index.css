@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.fredoka {
+  font-family: 'Fredoka', sans-serif;
+}
